@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickTask is a simple, responsive task manager built with HTML, CSS and JavaScript.">
+  <title>QuickTask — Stay focused</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="QuickTask home"><span class="brand-mark">✓</span> QuickTask</a>
+      <span class="today" id="today"></span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+      <h1>Make space for<br><span>what matters.</span></h1>
+      <p class="intro">A calmer way to plan your day. Add a task, check it off, and keep moving.</p>
+    </section>
+
+    <section class="task-panel" aria-label="Task manager">
+      <form id="task-form" class="task-form">
+        <label class="sr-only" for="task-input">New task</label>
+        <input id="task-input" type="text" maxlength="100" placeholder="What needs to get done?" autocomplete="off" required>
+        <button type="submit">Add task <span aria-hidden="true">＋</span></button>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="filter active" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="active" type="button">Active</button>
+          <button class="filter" data-filter="completed" type="button">Completed</button>
+        </div>
+        <button id="clear-completed" class="clear-button" type="button">Clear completed</button>
+      </div>
+
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+      <div id="empty-state" class="empty-state">
+        <span class="empty-icon">✦</span>
+        <strong>Your list is clear</strong>
+        <span>Add your first task above to get started.</span>
+      </div>
+      <footer class="panel-footer">
+        <span id="task-count">0 tasks left</span>
+        <span>Small steps. Real progress.</span>
+      </footer>
+    </section>
+    <p class="credit">Built with HTML · CSS · JavaScript</p>
+  </main>
+</body>
+</html>
